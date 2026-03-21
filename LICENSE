@@ -1,12 +1,12 @@
-HOLLOW POINT LABS PROPRIETARY LICENSE
+PROPRIETARY LICENSE
 Version 1.0, March 2026
 
-Copyright (c) 2025-2026 Andrew C. Dorman / Hollow Point Labs
+Copyright (c) 2025-2026 Andrew C. Dorman
 All Rights Reserved.
 
 NOTICE: This software and all associated documentation, algorithms, and
-intellectual property are the exclusive property of Andrew C. Dorman,
-operating as Hollow Point Labs. This is NOT open-source software.
+intellectual property are the exclusive property of Andrew C. Dorman.
+This is NOT open-source software.
 
 ==========================================================================
 1. PERMITTED USE
@@ -41,9 +41,9 @@ You MAY NOT, without prior written authorization from the copyright holder:
   (e) Remove, alter, or obscure this license notice, copyright notices,
       or attribution requirements.
   (f) Represent this work, or any derivative of it, as your own.
-  (g) Use the name "Hollow Point Labs," "SGM-Substrate," "SGM," or
-      "Andrew C. Dorman" to endorse or promote products derived from
-      this software without written permission.
+  (g) Use the name "SGM-Substrate," "SGM," or "Andrew C. Dorman" to
+      endorse or promote products derived from this software without
+      written permission.
 
 ==========================================================================
 3. ATTRIBUTION
@@ -52,7 +52,7 @@ You MAY NOT, without prior written authorization from the copyright holder:
 Any permitted use that references, cites, or builds upon this work MUST
 include the following attribution:
 
-  "Based on work by Andrew C. Dorman / Hollow Point Labs"
+  "Based on work by Andrew C. Dorman"
   https://github.com/ACD421
 
 Failure to provide attribution constitutes a violation of this license.
@@ -66,7 +66,6 @@ agreement. To obtain a commercial license, contact:
 
   Andrew C. Dorman
   andorman@ttu.edu
-  Hollow Point Labs
 
 Commercial licensing terms are negotiated on a case-by-case basis and
 may include royalties, one-time fees, or revenue-sharing arrangements
