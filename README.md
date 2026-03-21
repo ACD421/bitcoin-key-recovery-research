@@ -1,59 +1,39 @@
-# Bitcoin Private Key Recovery Research
+<div align="center">
 
-Bitcoin private key recovery research: bit-flip optimization, Hash160 analysis, multi-strategy approaches.
+# Bitcoin Key Recovery Research
+
+### Cryptographic Analysis of Key Space Optimization
+
+**Bit-flip optimization | Hash160 analysis | Multi-strategy approaches**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+</div>
 
 ## Overview
 
-This repository contains research notebooks exploring various approaches to Bitcoin private key recovery through cryptographic analysis. Methods include Hamming distance optimization via bit-flipping, Hash160 byte-level analysis, GPU-accelerated key generation, and Bloom filter-based batch scanning.
+Academic research into the mathematical properties of Bitcoin's key derivation and address generation. This work explores optimization strategies for key space search, including bit-flip heuristics, Hash160 collision analysis, and multi-strategy combinatorial approaches.
 
-## Repository Structure
+## Research Focus
 
-```
-bitflip/    - Bit-flip and Hamming distance optimization approaches
-hash160/    - Hash160-level multi-strategy analysis (multi-pass SHA-256, combined ML+Bloom)
-gpu/        - GPU-accelerated key generation (PyCUDA, Numba CUDA)
-bloom/      - Bloom filter-based high-throughput address scanning
-analysis/   - Key analysis tools, statistical distribution analysis, PDF reporting
-```
+- **Bit-flip optimization**: Measuring how key proximity in bit-space correlates with address proximity
+- **Hash160 analysis**: Statistical properties of RIPEMD-160(SHA-256(pubkey)) mapping
+- **Multi-strategy search**: Combining analytical and heuristic approaches
 
-## Methodology Overview
+## Disclaimer
 
-### Bit-Flip Optimization (bitflip/)
-Iterative bit-flip attacks starting from known "close" private keys, measuring Hamming distance at the Hash160 level. Includes:
-- Multiprocessing parallel bit-flip search (8 CPU cores)
-- GPU kernel for random bit generation (Numba CUDA)
-- BitflipAI: RL-inspired adaptive bit-flip strategy achieving Hash160 Hamming distance 16
-- Greedy sequential bit-locking optimization (coincurve)
-- Bloom filter dedup with heap-based top-N tracking
+This is academic cryptographic research. The mathematical hardness of ECDLP on secp256k1 makes brute-force key recovery computationally infeasible. This work studies the *structure* of the problem, not practical attacks.
 
-### Hash160 Analysis (hash160/)
-- Multi-pass SHA-256 with modular reduction testing
-- Combined PyTorch neural network + Bloom filter approaches
-- scikit-learn clustering with neural network guidance
+## Related
 
-### GPU Acceleration (gpu/)
-- PyCUDA-accelerated bulk key generation
-- Numba CUDA kernels with Google Drive checkpointing
+- [secp256k1-geometric-analysis](https://github.com/ACD421/secp256k1-geometric-analysis) -- Geometric properties of the curve
+- [bitcoin-puzzle-solvers](https://github.com/ACD421/bitcoin-puzzle-solvers) -- Challenge puzzle approaches
+- [QRTB](https://github.com/ACD421/qrtb) -- Post-quantum alternative
 
-### Bloom Filter Scanning (bloom/)
-- Probabilistic O(1) address lookup for high-throughput scanning
-- CuPy GPU-accelerated Bloom filter with memory-mapped storage
+## Author
 
-### Analysis Tools (analysis/)
-- Hash160 verification and derivation validation
-- RIPEMD-160 output distribution statistics (byte-level mean, stdev)
-- Interactive ipywidgets UI for key pattern exploration
-- Compressed/uncompressed public key format analysis
-- PDF report generation with reportlab
+**Andrew C. Dorman** -- [Hollow Point Labs](https://github.com/ACD421)
 
-## Dependencies
+## License
 
-- bitcoinlib, fastecdsa, coincurve, secp256k1
-- PyTorch, scikit-learn
-- PyCUDA, Numba, CuPy
-- numpy, scipy, matplotlib
-- pybloom-live, pybloomfiltermmap3
-
-## Platform
-
-All notebooks designed for Google Colab execution with GPU runtime.
+MIT
